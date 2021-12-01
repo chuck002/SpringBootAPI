@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.javy.CarTWOSpringBootBackendAPI.services.ReservasServiceImpl;
+import javax.transaction.Transactional;
 
 /**
  *
@@ -41,12 +42,10 @@ public class ReservaController {
     }
     
     @PostMapping("/add")
-    public String addReserva(@RequestBody Reserva reserva){
-        if (reserva != null) {
+    @Transactional
+    public Reserva addReserva(@RequestBody Reserva reserva){    
             reservas.agregar(reserva);
-            return "200 OK Reserva Agregada";
-        }
-        return "Reserva no Agregada";
+            return reserva;
     }
     
     @PutMapping("/edit/{id}")

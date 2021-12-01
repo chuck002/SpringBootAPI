@@ -22,44 +22,42 @@ import com.javy.CarTWOSpringBootBackendAPI.services.VehiculosServiceImpl;
  *
  * @author javy
  */
-
 @RestController
 @RequestMapping("/vehiculos")
 public class VehiculoController {
-    
+
     @Autowired
     private VehiculosServiceImpl vehiculos;
-    
+
     @GetMapping("/all")
-    public List<Vehiculo> getVehiculos(){
-        return (List<Vehiculo>)vehiculos.listar();
+    public List<Vehiculo> getVehiculos() {
+        return (List<Vehiculo>) vehiculos.listar();
     }
-    
+
     @GetMapping("/{id}")
-    public Vehiculo getVehiculo(@PathVariable(value = "id") Integer id){
+    public Vehiculo getVehiculo(@PathVariable(value = "id") Integer id) {
         return vehiculos.getOne(id);
     }
-    
+
     @PostMapping("/add")
-    public String addVehiculo(@RequestBody Vehiculo vehiculo){
-           if (vehiculo != null) {
-            vehiculos.agregar(vehiculo);
-            return "200 OK Vehiculo Agregado";
-        }
-        return "Vehiculo no encontrado";
+    public Vehiculo addVehiculo(@RequestBody Vehiculo vehiculo) {
+
+        vehiculos.agregar(vehiculo);
+
+        return vehiculo;
     }
-    
+
     @PutMapping("/edit/{id}")
-    public String updateVehiculo(@PathVariable("id") Integer id, @RequestBody Vehiculo vehiculo){
+    public String updateVehiculo(@PathVariable("id") Integer id, @RequestBody Vehiculo vehiculo) {
         if (vehiculo != null) {
             vehiculos.editar(vehiculo);
             return "200 OK Vehiculo Modificado";
         }
         return "Vehiculo no encontrado";
     }
-    
+
     @DeleteMapping("/delete/{id}")
-    public String deleteVehiculo(@PathVariable("id") Integer id){
+    public String deleteVehiculo(@PathVariable("id") Integer id) {
         Vehiculo vehiculo = vehiculos.getOne(id);
         if (vehiculo != null) {
             vehiculos.remover(id);

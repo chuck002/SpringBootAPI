@@ -14,7 +14,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import lombok.Data;
 
@@ -42,11 +42,8 @@ public class Reserva implements Serializable {
     private int id_oficina;
     @Column(nullable = false)
     private int id_cliente;
-    @Column(nullable = true)
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<Vehiculo> vehiculos_entregados;
     @Column(nullable = false)
-    @OneToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.MERGE)
     private List<Vehiculo> vehiculos_reservados;
 
     

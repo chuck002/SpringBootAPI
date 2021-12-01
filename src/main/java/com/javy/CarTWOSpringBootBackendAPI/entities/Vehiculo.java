@@ -35,6 +35,4 @@ public class Vehiculo implements Serializable {
     private String modelo;
     private String marca;
     private String color;
-
-    
 }

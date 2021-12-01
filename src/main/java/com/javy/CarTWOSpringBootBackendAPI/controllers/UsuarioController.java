@@ -40,12 +40,10 @@ public class UsuarioController {
     }
 
     @PostMapping("/add")
-    public String addUser(@RequestBody Usuario user) {
-        if (user != null) {
+    public Usuario addUser(@RequestBody Usuario user) {
             usuarios.agregar(user);
-            return "200 OK Usuario Agregado";
-        }
-        return "Usuario no Agregado";
+            return user;
+
     }
 
     @PutMapping("/edit/{id}")
