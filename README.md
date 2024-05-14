@@ -69,3 +69,6 @@ Implementacion de una API  para el manejo de una base de datos MariaDb para una 
 + Método HTTP: DELETE
 + Ruta: /delete/{id}
 + Descripción: Elimina el vehículo correspondiente al ID proporcionado en la ruta de la base de datos.
+
+### POSTMAN
+Agregada la coleccion en postman para utilizar estos endpoints.

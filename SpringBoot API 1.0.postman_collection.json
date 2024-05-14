@@ -1,0 +1,406 @@
+{
+	"info": {
+		"_postman_id": "d28aee63-8a72-48b3-ba69-7330d08461be",
+		"name": "SpringBoot API 1.0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15721271"
+	},
+	"item": [
+		{
+			"name": "Vehiculos",
+			"item": [
+				{
+					"name": "GET /vehiculos/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/vehiculos/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"vehiculos",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /vehiculos/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/vehiculos/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"vehiculos",
+								"2"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /vehiculos/add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"color\": \"azul\",\n    \"entregado\": 1,\n    \"litros_combustible\": 50,\n    \"marca\": \"Tesla\",\n    \"modelo\": \"H1\",\n    \"patente\": \"aaz1122\",\n    \"precio_alquiler\": 1800.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/vehiculos/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"vehiculos",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /vehiculos/edit/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"color\": \"azul\",\n    \"entregado\": 1,\n    \"litros_combustible\": 50,\n    \"marca\": \"Tesla Modificado\",\n    \"modelo\": \"H12\",\n    \"patente\": \"aaz1122\",\n    \"precio_alquiler\": 1800.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/vehiculos/edit/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"vehiculos",
+								"edit",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /vehiculos/delete/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/vehiculos/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"vehiculos",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "GET /usuarios/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/usuarios/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"usuarios",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /usuarios/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/usuarios/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"usuarios",
+								"2"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /usuarios/add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": \"test2\",\n    \"pass\": \"test2\",\n    \"rol\": 2,\n    \"nombre\": \"Test02\",\n    \"dni\": 22266655,\n    \"direccion\": \"test02 123\",\n    \"telefono\": \"555-66622\",\n    \"sucursal\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/usuarios/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"usuarios",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /usuarios/edit/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": \"admin\",\n    \"pass\": \"admin\",\n    \"rol\": 1,\n    \"nombre\": \"Admin Actualizado\",\n    \"dni\": 22266655,\n    \"direccion\": \"Admin 123\",\n    \"telefono\": \"555-66622\",\n    \"sucursal\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/usuarios/edit/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"usuarios",
+								"edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /usuarios/delete/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/usuarios/delete/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"usuarios",
+								"delete",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reservas",
+			"item": [
+				{
+					"name": "GET /reservas/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/reservas/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"reservas",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /reservas/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/reservas/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"reservas",
+								"2"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /reservas/add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fecha_final\": \"16-05-2024\",\n    \"fecha_inicio\": \"14-05-2024\",\n    \"id_cliente\": 3,\n    \"id_oficina\": \"1\",\n    \"precio_total\": 25000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/reservas/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"reservas",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /reservas/edit/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fecha_final\": \"16-05-2024\",\n    \"fecha_inicio\": \"14-05-2024\",\n    \"id_cliente\": 3,\n    \"id_oficina\": \"1\",\n    \"precio_total\": 25000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/reservas/edit/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"reservas",
+								"edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /reservas/delete/{id}reservas",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/reservas/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"reservas",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
