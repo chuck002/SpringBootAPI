@@ -49,6 +49,7 @@ public class VehiculoController {
 
     @PutMapping("/edit/{id}")
     public String updateVehiculo(@PathVariable("id") Integer id, @RequestBody Vehiculo vehiculo) {
+        vehiculo.setId(id);
         if (vehiculo != null) {
             vehiculos.editar(vehiculo);
             return "200 OK Vehiculo Modificado";

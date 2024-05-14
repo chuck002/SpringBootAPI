@@ -48,6 +48,8 @@ public class UsuarioController {
 
     @PutMapping("/edit/{id}")
     public String updateUser(@PathVariable("id") Integer id, @RequestBody Usuario user) {
+
+        user.setId(id);
         if (user != null) {
             usuarios.editar(user);
             return "200 OK Usuario Editado";

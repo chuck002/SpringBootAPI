@@ -50,6 +50,8 @@ public class ReservaController {
     
     @PutMapping("/edit/{id}")
     public String updateReserva(@PathVariable("id") Integer id, @RequestBody Reserva reserva){
+        
+        reserva.setId(id);
         if (reserva != null) {
             reservas.editar(reserva);
             return "200 OK Reserva Editada";
